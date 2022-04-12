@@ -17,7 +17,7 @@
                with font-awesome or any other icon font library -->
 
         <li class="nav-item">
-          <a href="../widgets.html" class="nav-link">
+          <a [routerLink]="['/MovieComponent']" routerLinkActive="router-link-active"  class="nav-link">
             <i class="nav-icon fas fa-search"></i>
             <p>
               Busqueda
@@ -25,7 +25,7 @@
           </a>
         </li>
         <li class="nav-item">
-          <a href="../widgets.html" class="nav-link">
+          <a [routerLink]="['/ListMoviesComponent']" routerLinkActive="router-link-active"  class="nav-link">
             <i class="nav-icon fas fa-film"></i>     
               <p>
               Peliculas
