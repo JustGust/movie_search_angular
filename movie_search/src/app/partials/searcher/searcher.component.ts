@@ -1,4 +1,5 @@
 import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
+import { GetNameMovieService } from './get-name-movie.service';
 
 @Component({
   selector: 'app-searcher',
@@ -7,7 +8,7 @@ import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 })
 export class SearcherComponent implements OnInit {
 
-  constructor() { }
+  constructor(private serviceGetMovie: GetNameMovieService) { }
 
   @Output() movieSelected = new EventEmitter<string>();
   @Input() placeholder: string | undefined;
@@ -18,7 +19,7 @@ export class SearcherComponent implements OnInit {
 
 
   selectMovie(){
-    this.movieSelected.emit(this.name);
+    this.serviceGetMovie.movieNamne.emit(this.name);
   }
 
 

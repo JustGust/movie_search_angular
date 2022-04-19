@@ -14,8 +14,4 @@ export class NavbarComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  selectMovie(e: string){
- this.nameMovie.emit(e);
-  }
-
 }

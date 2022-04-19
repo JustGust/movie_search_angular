@@ -4,7 +4,7 @@
 
         <!-- Navbar -->
        
-        <app-navbar></app-navbar>
+        <app-navbar (nameMovie) = "movie($event)"></app-navbar>
         <!-- /.navbar -->
 
         <!--   aside -->
@@ -13,8 +13,8 @@
 
         <div class="content-wrapper">
             <!-- Main content -->
-            <section class="content my-3">
-                <router-outlet></router-outlet>
+            <section class="content my-3 overflow-scroll" style="width: 100%; height: 600px;" >
+                <router-outlet ></router-outlet>
             </section>
             <!-- /.content -->
         </div>

@@ -1,4 +1,6 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
+
+
 
 @Component({
   selector: 'app-root',
@@ -8,6 +10,12 @@ import { Component } from '@angular/core';
 export class AppComponent {
   title = 'movie_search';
 
+  nameM: string = '';
+
+  movie(event: string){
+  this.nameM = event;
+  console.log(this.nameM);
+  }
 }
 
 

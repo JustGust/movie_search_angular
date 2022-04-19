@@ -1,0 +1,33 @@
+<div class="movie-card">
+
+    <div class="container">
+
+        <a><img [src]="movie.Poster" width="200px" height="300px" alt="cover" class="cover" /></a>
+
+        <div class="hero">
+            <div class="details">
+                <div class="title1">
+                    Duracion: {{movie.Runtime}}
+                </div>
+                <div class="title2">
+                    {{movie.Title}}
+                </div>
+                <span class="likes">{{movie.imdbVotes}}</span>
+            </div>
+        </div>
+
+        <div class="description">
+            <div class="column1" *ngIf="movie?.Genre">
+                <span class="tag" *ngFor="let item of getGenresList(movie.Genre)">{{item}}</span>
+            </div> <!-- end column1 -->
+
+            <div class="column2" *ngIf="movie?.Actors">
+                <p>{{movie.Plot}}</p>
+                <div class="avatars" >
+                    <span class="tag" *ngFor="let item of getActorsList(movie.Actors)">{{item}}</span>
+                </div>
+               <p><span>{{movie.Released}}</span></p> 
+            </div>
+        </div>
+    </div>
+</div>
