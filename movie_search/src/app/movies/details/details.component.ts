@@ -16,14 +16,14 @@ export class DetailsComponent implements OnInit {
 
   movie: Movie = new Movie();
 
-  async ngOnInit() {
+  async ngOnInit() {    
     try {
       const req: any = await this.searcher.getMovie(
         this.activatedRoute.snapshot.params['id']
       );
 
       if (req.Response == 'True') {
-        this.movie = req;
+        this.movie = req;        
       }
     } catch (error) {
       console.log(error);
